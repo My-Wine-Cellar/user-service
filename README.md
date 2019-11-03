@@ -1,15 +1,15 @@
 # user-service for winecellar-webapp
 
 ## General info
-> REST service for winecellar-webapp to manage user login, registration and password reset
+> REST service for winecellar-webapp to manage user login, registration, and password reset
 
 ## Docker
 > You will need to have [Docker Engine](https://docs.docker.com/install/) installed before proceeding
 
 ```
-$ docker run --name mysql-dev -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_USER=winecellar -e MYSQL_PASSWORD=winecellar -e MYSQL_DATABASE=user-service mysql
+$ docker run --name user-service -p 5433:5432 -d -e POSTGRES_USER=winecellar -e POSTGRES_PASSWORD=winecellar -e POSTGRES_DB=user-service postgres
 ```
-> This will pull down the latest mysql image and run the container with all necessary SpringBoot properties for connection. 
+> This will pull down the latest PostgreSQL image and run the container with all necessary Spring Boot properties for connection. 
 
 ## Project Setup
 ```
